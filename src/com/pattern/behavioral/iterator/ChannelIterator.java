@@ -1,6 +1,5 @@
-package com.pattern.creational.iterator;
+package com.pattern.behavioral.iterator;
 
-// Our iterator interface
 public interface ChannelIterator {
 	public boolean hasNext();
 	

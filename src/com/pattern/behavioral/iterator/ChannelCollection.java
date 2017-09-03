@@ -1,7 +1,5 @@
-package com.pattern.creational.iterator;
+package com.pattern.behavioral.iterator;
 
-// Note: no method that returns the list of channels
-// Our collection interface
 public interface ChannelCollection {
 	public void addChannel(Channel c);
 	

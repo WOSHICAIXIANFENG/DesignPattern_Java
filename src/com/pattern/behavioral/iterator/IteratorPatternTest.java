@@ -1,20 +1,26 @@
-package com.pattern.creational.iterator;
+package com.pattern.behavioral.iterator;
 
 public class IteratorPatternTest {
 
 	public static void main(String[] args) {
 		ChannelCollection channels = populateChannels();
 		
+		ChannelIterator baseIterator = channels.iterator(ChannelTypeEnum.ALL);
+		while (baseIterator.hasNext()) {
+			Channel c = baseIterator.next();
+			System.out.println(c.toString());
+		}
+		
+		System.out.println("*******************************");
+		
 		// Channel Type Iterator
 		ChannelIterator englishIterator = channels.iterator(ChannelTypeEnum.ENGLISH);
-		
 		while (englishIterator.hasNext()) {
 			Channel c = englishIterator.next();
 			System.out.println(c.toString());
 		}
 	}
 
-	
 	private static ChannelCollection populateChannels() {
 		ChannelCollection channels = new ChannelCollectionImpl();
 		channels.addChannel(new Channel(98.5, ChannelTypeEnum.ENGLISH));
@@ -28,4 +34,5 @@ public class IteratorPatternTest {
 		channels.addChannel(new Channel(106.5, ChannelTypeEnum.FRENCH));
 		return channels;
 	}
+
 }

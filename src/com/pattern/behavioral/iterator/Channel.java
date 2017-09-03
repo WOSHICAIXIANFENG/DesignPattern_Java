@@ -1,4 +1,4 @@
-package com.pattern.creational.iterator;
+package com.pattern.behavioral.iterator;
 
 public class Channel {
 	private double frequency;
